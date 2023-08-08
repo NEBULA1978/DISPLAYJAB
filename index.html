@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El DISPLAY</title>
+    <style type="text/css">
+        h1,nav,main,article,nav,section,aside,a,span,button,input{
+            border: solid orange;
+            background-color: bisque;
+            /* sin width ocupan todo el ancho width:200px; */
+            width:200px;
+            /* Para poner mismo margen a todos*/
+            margin: 2px;
+            /* Los inline no cambian el tamaño son como son */
+            /* height: 50px; */
+            
+
+        }
+        div,img{
+            border:0cqmin black;
+            
+        }
+        div{
+            display: inline-block;
+        }
+        img{
+            vertical-align: top;
+        }
+        h1:hover{
+            /* display: none; */
+            visibility: hidden;
+            
+            height: 50px;
+        }
+        a{
+            width: 25px;
+        }
+        @media only screen and (max-wid:600px){
+            nav{
+                flex-direction: column;
+            }
+            a:nth-cild(1){
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- TODAS son display block -->
+    <section>
+        <div> <img src="https://www.html6.es/img_html/micanalyoutube.png" alt=""></div>
+        <div> <img src="https://www.html6.es/img_html/micanalyoutube.png" alt=""></div>
+
+    </section>
+    <h1>YEAA</h1>
+    <main>B</main>
+    <section><p>Display block ocupan todo el ancho posible whidth:100%</p></section>
+    <article><p>Ocupan solo el alto que necesitan</p></article>
+    <nav><p>No tienen ninguna separacion entre ellos</p></nav>
+    <aside><p>Se colocan uno debajo del otro con width:200px</p></aside>
+    <!-- Asi juntos se juntam y tienen separacion de margin -->
+    <a href="#">A</a><a href="#">BBB</a><a href="#">C</a><span>D</span>
+    <p>Elementos de tipo inline a span strong b</p>
+    <p>Ocupan estricta y exactamente el ancho justo que necesitan</p>
+    <p>No se puede modificar ni su ancho ni su alto</p>
+    <a href="#">Siempre hay una separacion fija entre sus elementos</a>
+    <h2>Etiquetas inline-block</h2>
+    <h2>Se les puede modificar cualquier propiedad</h2>
+    <button>Aceptar</button>
+    <input type="text">
+    <img src="https://www.html6.es/img_html/micanalyoutube.png" alt="">
+    <footer><p>Voy minuto 14 de 17</p></footer>
+</body>
+</html>
